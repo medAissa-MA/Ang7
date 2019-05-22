@@ -1,0 +1,32 @@
+<div class="col-md-4">
+    <h4>user name : {{ user.username }}</h4>
+    <div class="form-group">
+        <label >Edit the username </label>
+        <input [(ngModel)]="user.username" placeholder="name" type="text" class="form-control"/>
+    </div>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Favorite food" value="Sushi">
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Leave a comment"></textarea>
+        </mat-form-field>
+      </form>
+    
+      <mat-form-field>
+          <input matInput placeholder="Simple Input" [(ngModel)]="title">
+        </mat-form-field>
+        
+        <mat-icon>home</mat-icon>
+        <br>
+        <button mat-raised-button>I'm a button</button>
+        <br>
+        <mat-form-field>
+          <mat-select placeholder="I'm a select" [(ngModel)]="selectedValue">
+            <mat-option *ngFor="let item of items" [value]="item.value">
+              {{item.view}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+  </div>
